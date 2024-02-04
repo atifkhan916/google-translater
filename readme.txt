@@ -36,5 +36,21 @@ https://console.cloud.google.com/
 # This will open the API Library where you will have to search for the Cloud Translation API in the search bar
 # Once you’ve identified it, select it and click Enable. You will have to setup a billing account to enable it
 
-#Create service account accesskeys from Google account project
-#download the file and place it under src\lambda\translate\resource folder
+# Create service account accesskeys from Google account project
+# download the file and place it under src\lambda\translate\resource folder
+
+# once the file is placed. Open Git Bash console
+# run the below command
+./deploy.sh
+
+# If everything is properly setup then this will download python dependencies
+# create a zip with lmabda code and dependencies
+# Run Pulumi commands to install the lambda and APIGateway in your aws account
+
+# console will show the APIGateway URL
+# Append /dev/v1/translate to it
+e.g. https://bot8l3bjye.execute-api.ap-south-1.amazonaws.com/dev/v1/translate
+Set action as POST
+post a raw json message e.g.
+{"text": "hello Martha, how are you doing \n in this beautiful world"}
+
